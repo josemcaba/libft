@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "__locale": "c",
+        "__functional_03": "c",
+        "functional": "c"
+    },
+	"C_Cpp.errorSquiggles": "disabled",
+	"cmake.configureOnOpen": false
+}
