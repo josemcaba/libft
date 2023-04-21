@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// The ft_strrchr() function locates the last occurrence of c (converted to a
+// char) in the string pointed to by s.  The terminating null character is
+// considered to be part of the string; therefore if c is `\0', the func-
+// tions locate the terminating `\0'.
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -17,9 +22,9 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	i = ft_strlen(s);
-	while ((i > 0) && (*(s + i) != c))
+	while ((i > 0) && (*(s + i) != (char)c))
 		i--;
-	if (*(s + i) == c)
+	if (*(s + i) == (char)c)
 		return ((char *)(s + i));
 	return (0);
 }
