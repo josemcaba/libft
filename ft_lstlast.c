@@ -6,7 +6,7 @@
 /*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:20:52 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/21 17:25:44 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/21 19:31:59 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*node;
 
+	if (lst == NULL)
+		return (0);
 	node = lst;
 	while (node->next)
 		node = node->next;

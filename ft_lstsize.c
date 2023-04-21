@@ -6,14 +6,12 @@
 /*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:20:14 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/21 17:43:38 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/21 20:20:12 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Nombre de función		:	ft_lstsize
-// Prototipo				:	int ft_lstsize(t_list *lst);
 // Parámetros				:	lst: el principio de la lista.
 // Valor devuelto			:	La longitud de la lista
 // Funciones autorizadas	:	Ninguna

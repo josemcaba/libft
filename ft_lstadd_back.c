@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:21:34 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/21 17:21:49 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/21 20:04:40 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*node;
 
 	node = ft_lstlast(*lst);
-	node->next = new;
+	if (node == NULL)
+		*lst = new;
+	else
+		node->next = new;
 }
