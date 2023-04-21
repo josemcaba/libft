@@ -6,7 +6,7 @@
 #    By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 14:19:51 by jocaball          #+#    #+#              #
-#    Updated: 2023/04/21 17:17:02 by jocaball         ###   ########.fr        #
+#    Updated: 2023/04/21 18:13:23 by jocaball         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJ = $(SRC:%.c=%.o)
 
 SRC_BONUS = ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	\
 			ft_lstlast.c	ft_lstadd_back.c	ft_lstdelone.c	\
-			#ft_lstclear.c	ft_lstiter.c
+			ft_lstclear.c	ft_lstiter.c		ft_lstmap.c
 
 OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
 
