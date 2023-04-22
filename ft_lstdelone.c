@@ -6,15 +6,12 @@
 /*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:22:21 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/21 17:26:29 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/22 21:51:43 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Nombre de función		:	ft_lstdelone
-// Prototipo				:	void ft_lstdelone(t_list *lst, 
-// 												  void (*del)(void *));
 // Parámetros				:	lst: el nodo a liberar.
 //								del: un puntero a la función utilizada para 
 //								liberar el contenido del nodo.

@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-// Nombre de función		:	ft_lstnew
-// Prototipo				:	t_list *ft_lstnew(void *content);
 // Parámetros				:	content: el contenido con el que crear el nodo.
 // Valor devuelto			:	El nuevo nodo
 // Funciones autorizadas	:	malloc

@@ -6,7 +6,7 @@
 #    By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 14:19:51 by jocaball          #+#    #+#              #
-#    Updated: 2023/04/21 18:13:23 by jocaball         ###   ########.fr        #
+#    Updated: 2023/04/22 23:16:45 by jocaball         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ clean :
 
 fclean :
 	rm -f $(OBJ) $(NAME)
-	rm -f *.o a.out
+	rm -f *.o a.out 
 
 re : fclean all
 
