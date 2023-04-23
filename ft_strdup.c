@@ -6,7 +6,7 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 13:10:41 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/20 13:10:44 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:18:02 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,11 @@ char	*ft_strdup(const char *s1)
 {
 	char	*s2;
 	size_t	len;
-	size_t	i;
 
 	len = ft_strlen(s1);
 	s2 = (char *)malloc(len + 1);
 	if (!s2)
 		return (NULL);
-	i = 0;
-	while (i <= len)
-	{
-		s2[i] = s1[i];
-		i++;
-	}
+	ft_memcpy(s2, s1, len + 1);
 	return (s2);
 }

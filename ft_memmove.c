@@ -6,14 +6,14 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:00:46 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/18 14:17:13 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 19:14:37 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // The ft_memmove() function copies len bytes from string src to string dst.
 // The two strings may overlap; the copy is always done in a non-destructive
 // manner.
-
+//
 // The ft_memmove() function returns the original value of dst.
 
 #include "libft.h"

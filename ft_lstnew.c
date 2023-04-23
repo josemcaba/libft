@@ -6,11 +6,9 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:06:45 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/21 17:07:52 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 22:14:13 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 // Parámetros				:	content: el contenido con el que crear el nodo.
 // Valor devuelto			:	El nuevo nodo
@@ -19,6 +17,8 @@
 // 								variable miembro ’content’ se inicializa con el
 // 								contenido del parámetro ’content’. La variable
 // 								’next’, con NULL.
+
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

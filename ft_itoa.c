@@ -6,9 +6,16 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:52:20 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/20 12:52:24 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 21:49:06 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Parametros  : n: el entero a convertir.
+// Devuelve    : La string que represente el número.
+//               NULL si falla la reserva de memoria.
+// Descripcion : Utilizando malloc(3), genera una string que represente el
+//               valor entero recibido como argumento. Los números negativos
+//               tienen que gestionarse.
 
 #include "libft.h"
 

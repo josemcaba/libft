@@ -6,12 +6,16 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:50:55 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/20 12:51:14 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:45:03 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Reserva (con malloc(3) y devuelve una nueva string,
-// formada por la concatenación de 's1' y 's2'.
+// Parametros  : s1: La primera string.
+//               s2: La string a añadir a ’s1’.
+// Devuelve    : La nueva string.
+// 				 NULL si falla la reserva de memoria.
+// Descripcion : Reserva (con malloc(3)) y devuelve una nueva string, formada
+//               por la concatenación de 's1' y 's2'.
 
 #include "libft.h"
 

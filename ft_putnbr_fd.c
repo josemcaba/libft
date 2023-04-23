@@ -6,9 +6,13 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:50:26 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/20 13:07:04 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 22:12:43 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Parametros  : n : El número que enviar.
+//               fd: El file descriptor sobre el que escribir.
+// Descripcion : Envía el número ’n’ al file descriptor dado.
 
 #include "libft.h"
 

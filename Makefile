@@ -6,7 +6,7 @@
 #    By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 14:19:51 by jocaball          #+#    #+#              #
-#    Updated: 2023/04/22 23:16:45 by jocaball         ###   ########.fr        #
+#    Updated: 2023/04/23 22:50:36 by jocaball         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,22 +37,23 @@ OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-LIB = ar rcs
+LIB = ar rcs 
 
 all : $(NAME)
 
 $(NAME): $(OBJ) $(HDR)
-	$(LIB) $(NAME) $(OBJ)
+	@$(LIB) $(NAME) $(OBJ)
+	@echo "Library has been created"
 
 bonus: $(OBJ) $(OBJ_BONUS) $(HDR)
-	$(LIB) $(NAME) $(OBJ) $(OBJ_BONUS)
+	@$(LIB) $(NAME) $(OBJ) $(OBJ_BONUS)
+	@echo "Library has been created including bonus functions"
 
 clean :
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS) 
 
-fclean :
-	rm -f $(OBJ) $(NAME)
-	rm -f *.o a.out 
+fclean : clean
+	rm -f $(NAME)
 
 re : fclean all
 

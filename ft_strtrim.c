@@ -6,13 +6,18 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:43:09 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/22 20:09:14 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:49:50 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Elimina todos los caracteres de la string 'set' desde el principio y desde
-// el final de 's1', hasta encontrar un caracter no perteneciente a 'set'. La
-// string resultante se devuelve con una reserva de malloc(3).
+// Parametros  : s1  : La string que debe ser recortada.
+//               set : Los caracteres a eliminar de la string.
+// Devuelve    : La string recortada.
+//               NULL si falla la reserva de memoria.
+// Descripcion : Elimina todos los caracteres de la string 'set' desde el
+//               principio y desde el final de 's1', hasta encontrar un
+//               caracter no perteneciente a 'set'. La string resultante se
+//               devuelve con una reserva de malloc(3).
 
 #include "libft.h"
 

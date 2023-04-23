@@ -6,11 +6,9 @@
 /*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:22:21 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/22 21:51:43 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 22:18:00 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 // Parámetros				:	lst: el nodo a liberar.
 //								del: un puntero a la función utilizada para 
@@ -21,6 +19,8 @@
 // 								memoria del contenido utilizando la función 
 // 								’del’ dada como parámetro, además de liberar el 
 // 								nodo. La memoria de ’next’ no debe liberarse.
+
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

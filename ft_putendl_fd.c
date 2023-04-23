@@ -6,9 +6,14 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 13:06:27 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/20 13:06:32 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/23 22:08:52 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Parametros  : s: La string a enviar.
+//               fd: El file descriptor sobre el que escribir.
+// Descripcion : Envía la string ’s’ al descriptor dado, seguido de un salto de
+//               línea.
 
 #include "libft.h"
 
