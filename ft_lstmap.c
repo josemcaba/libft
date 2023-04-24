@@ -49,3 +49,56 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
+
+// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+// {
+// 	t_list	*mainh;
+// 	t_list	*temp;
+// 	t_list	*new;
+
+// 	if (!lst)
+// 		return (NULL);
+// 	mainh = ft_lstnew((*f)(lst->content));
+// 	if (!mainh)
+// 		return (NULL);
+// 	temp = lst->next;
+// 	while (temp != NULL)
+// 	{
+// 		new = ft_lstnew((*f)(temp->content));
+// 		if (!new)
+// 		{
+// 			ft_lstclear(&mainh, del);
+// 			return (NULL);
+// 		}
+// 		ft_lstadd_back(&mainh, new);
+// 		temp = temp->next;
+// 	}
+// 	return (mainh);
+// }
+
+// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+// {
+// 	t_list	*tmp;
+// 	t_list	*newlst;
+
+// 	if (!lst || !f || !del)
+// 		return (0);
+	
+// 	tmp = ft_lstnew(f(lst->content));
+// 	if (!tmp)
+// 		return (0);
+// 	lst = lst->next;
+// 	newlst = tmp;
+// 	while (lst)
+// 	{
+// 		tmp = ft_lstnew(f(lst->content));
+// 		if (!tmp)
+// 		{
+// 			ft_lstclear(&newlst, del);
+// 			return (0);
+// 		}
+// 		ft_lstadd_back(&newlst, tmp);
+// 		lst = lst->next;
+// 	}
+// 	return (newlst);
+// }
