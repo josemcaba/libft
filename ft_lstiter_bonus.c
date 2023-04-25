@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 18:08:54 by jocaball          #+#    #+#             */
 /*   Updated: 2023/04/23 22:20:13 by jocaball         ###   ########.fr       */

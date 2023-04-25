@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:21:34 by jocaball          #+#    #+#             */
 /*   Updated: 2023/04/23 22:17:37 by jocaball         ###   ########.fr       */
