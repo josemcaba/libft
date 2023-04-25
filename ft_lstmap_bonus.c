@@ -51,7 +51,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_lst);
 }
 
-/*
+
 #include <stdio.h>
 
 void *add_one(void *num)
@@ -101,4 +101,4 @@ int main(void)
 
     return (0);
 }
-*/
+
