@@ -75,3 +75,56 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
+
+
+#include "libft.h"
+#include <stdio.h>
+
+void *add_one(void *num)
+{
+    int *new_num = (int *)malloc(sizeof(int));
+    *new_num = *((int *)num) * (-1);
+    return (new_num);
+}
+
+void free_int(void *num)
+{
+    free(num);
+}
+
+int main(void)
+{
+    int num1 = 1;
+    int num2 = 2;
+    int num3 = 3;
+
+    t_list *lst;
+    lst = ft_lstnew(&num1);
+    ft_lstadd_back(&lst, ft_lstnew(&num2));
+    ft_lstadd_back(&lst, ft_lstnew(&num3));
+
+    t_list *new_lst = ft_lstmap(lst, add_one, free_int);
+
+    // Imprimir los valores de la lista original
+    printf("Valores de la lista original:\n");
+    while (lst)
+    {
+        printf("%d\n", *((int *)lst->content));
+        lst = lst->next;
+    }
+
+    // Imprimir los valores de la lista modificada
+    printf("Valores de la lista modificada:\n");
+    while (new_lst)
+    {
+        printf("%d\n", *((int *)new_lst->content));
+        new_lst = new_lst->next;
+    }
+
+    // Liberar memoria
+    ft_lstclear(&lst, free_int);
+    ft_lstclear(&new_lst, free_int);
+
+    return (0);
+}
+
