@@ -6,7 +6,7 @@
 /*   By: jocaball <jocaball@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 09:22:24 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/25 09:22:24 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:47:43 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 
 #include "libft.h"
 
-/*
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
@@ -37,28 +36,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_lst = ft_lstnew((*f)(lst->content));
 	if (!new_lst)
 		return (NULL);
-	while ((*lst).next)
-	{
-		lst = (*lst).next;
-		new_node = ft_lstnew((*f)(lst->content));
-		if (!new_node)
-		{
-			ft_lstclear(&new_lst, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_lst, new_node);
-	}
-	return (new_lst);
-}
-*/
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list	*new_lst;
-	t_list	*new_node;
-
-	if (!lst || !f || !del)
-		return (NULL);
-	new_lst = NULL;
+	lst = lst->next;
 	while (lst)
 	{
 		new_node = ft_lstnew((*f)(lst->content));
@@ -67,23 +45,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
-		if (new_lst == NULL)
-			new_lst = new_node;
-		else
-			ft_lstadd_back(&new_lst, new_node);
+		ft_lstadd_back(&new_lst, new_node);
 		lst = lst->next;
 	}
 	return (new_lst);
 }
 
-
-#include "libft.h"
+/*
 #include <stdio.h>
 
 void *add_one(void *num)
 {
     int *new_num = (int *)malloc(sizeof(int));
-    *new_num = *((int *)num) * (-1);
+    *new_num = *((int *)num) + 'A' - 1;
     return (new_num);
 }
 
@@ -127,4 +101,4 @@ int main(void)
 
     return (0);
 }
-
+*/
