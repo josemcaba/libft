@@ -22,7 +22,7 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*node;
 
 	if (lst == NULL)
-		return (0);
+		return (NULL);
 	node = lst;
 	while (node->next)
 		node = node->next;

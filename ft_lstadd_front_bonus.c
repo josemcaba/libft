@@ -23,10 +23,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*ptr;
-
-	ptr = new;
-	new = *lst;
-	*lst = ptr;
-	lst[0]->next = new;
+	new->next = *lst;
+	*lst = new;
 }
