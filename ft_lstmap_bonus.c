@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 09:22:24 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/26 20:42:34 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/04/27 21:50:42 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_lst = NULL;
 	while (lst)
 	{
-		new_node = ft_lstnew((*f)(lst->content));
+		new_node = (t_list *)malloc(sizeof(t_list));
 		if (!new_node)
 		{
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
+		new_node->content = (*f)(lst->content);
+		new_node->next = NULL;
 		ft_lstadd_back(&new_lst, new_node);
 		lst = lst->next;
 	}

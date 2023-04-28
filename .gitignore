@@ -2,3 +2,6 @@
 .DS_Store
 *.exe
 try1/
+libft.a
+tests/
+
