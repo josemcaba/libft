@@ -99,6 +99,28 @@ void	pf_flags_read(t_flags *flags, char const *format);
 ssize_t	ft_putchar(char c);
 ssize_t	ft_putstr(char *s);
 char	*ft_htoa(size_t n, int specifier);
-char	*ft_uitoa(unsigned int n);;
+char	*ft_uitoa(unsigned int n);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 81
+# endif
+
+# define FD_MAX 2048
+
+typedef struct s_glist
+{
+	char			*content;
+	struct s_glist	*next;
+	int				nl_flag;
+	size_t			nl;
+	size_t			len;
+}	t_glist;
+
+char	*get_next_line(int fd);
+t_glist	*lst_new_node(char *content, int nl_flag, size_t len);
+void	lst_add_node(t_glist **list, t_glist *node);
+void	lst_free(t_glist **lst);
+void	mem_cpy_str(char *dst, char *src, size_t len);
+size_t	str_len(char *str, int *nl_flag);
 
 #endif
