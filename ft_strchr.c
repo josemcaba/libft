@@ -15,11 +15,13 @@
 // considered to be part of the string; therefore if c is `\0', the func-
 // tions locate the terminating `\0'.
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s && (*s != (char)c))
 		s++;
 	if (*s == (char)c)
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
