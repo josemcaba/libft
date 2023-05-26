@@ -6,7 +6,7 @@
 /*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 22:00:46 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/24 22:00:46 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/05/26 18:51:21 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -66,5 +67,38 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+typedef struct s_flags
+{
+	char	specifier;
+	int		minus;
+	int		zero;
+	int		dot;
+	int		hash;
+	int		space;
+	int		plus;
+	int		width;
+	int		precision;
+	int		nflags;
+	int		negative;
+}	t_flags;
+
+int		ft_printf(char const *format, ...);
+int		pf_char_convert(va_list *args, t_flags *flags);
+int		pf_char_convert_narg(t_flags *flags);
+int		pf_str_convert(va_list *args, t_flags *flags);
+int		pf_int_convert(va_list *args, t_flags *flags);
+void	pf_fill_pad_int(char **pad, char *nbr, t_flags *flags);
+void	pf_add_prfx_int(char **pad, int *nbr_len, t_flags *flags, int no_zero);
+int		pf_alloc_pad_int(char **pad, char *nbr, t_flags *flags);
+void	pf_add_precision(char **pad, int *nbr_len, t_flags *flags, int zero);
+void	pf_add_width_int(char **pad, int nbr_len, t_flags *flags);
+int		pf_uint_convert(va_list *args, t_flags *flags);
+int		pf_hex_convert(va_list *args, t_flags *flags);
+void	pf_flags_read(t_flags *flags, char const *format);
+ssize_t	ft_putchar(char c);
+ssize_t	ft_putstr(char *s);
+char	*ft_htoa(size_t n, int specifier);
+char	*ft_uitoa(unsigned int n);;
 
 #endif
