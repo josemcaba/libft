@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 14:12:47 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/23 20:07:51 by jocaball         ###   ########.fr       */
+/*   Created: 2023/06/09 20:29:47 by jocaball          #+#    #+#             */
+/*   Updated: 2023/06/09 20:32:13 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The ft_atoi() function converts the initial portion of the string pointed to
-// by str to int representation.
+// The ft_atol() function converts the initial portion of the string pointed to
+// by str to long representation.
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
-	int	sign;
-	int	number;
+	long	sign;
+	long	number;
 
 	while (((*str >= '\t') && (*str <= '\r')) || (*str == ' '))
 		str++;
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	number = 0;
 	while ((*str >= '0') && (*str <= '9'))
 	{
-		number = (number * 10) + *str - '0';
+		number = (number * 10) + (*str - '0');
 		str++;
 	}
 	number = sign * number;

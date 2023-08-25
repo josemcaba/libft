@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 13:06:05 by jocaball          #+#    #+#             */
-/*   Updated: 2023/04/23 22:03:01 by jocaball         ###   ########.fr       */
+/*   Created: 2023/08/21 12:52:40 by jocaball          #+#    #+#             */
+/*   Updated: 2023/08/25 12:18:26 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Parametros  : c: El carácter a enviar.
-//               fd: El file descriptor sobre el que escribir.
-// Descripcion : Envía el carácter ’c’ al file descriptor especificado.
-
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_exit(char *str)
 {
-	write(fd, &c, 1);
+	ft_putstr_fd(str, 2);
+	ft_putchar_fd('\n', 2);
+	exit(EXIT_FAILURE);
 }

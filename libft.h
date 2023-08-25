@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocaball <jocaball@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jocaball <jocaball@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 22:00:46 by jocaball          #+#    #+#             */
-/*   Updated: 2023/05/26 18:51:21 by jocaball         ###   ########.fr       */
+/*   Updated: 2023/06/09 20:35:56 by jocaball         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -102,7 +103,7 @@ char	*ft_htoa(size_t n, int specifier);
 char	*ft_uitoa(unsigned int n);
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 81
+#  define BUFFER_SIZE 255
 # endif
 
 # define FD_MAX 2048
@@ -122,5 +123,11 @@ void	lst_add_node(t_glist **list, t_glist *node);
 void	lst_free(t_glist **lst);
 void	mem_cpy_str(char *dst, char *src, size_t len);
 size_t	str_len(char *str, int *nl_flag);
+
+char	*ft_btoc(char *bits);
+char	*ft_ctob(char *chars);
+
+size_t	ft_wc(char const *str, char c);
+void	ft_error(char *str);
 
 #endif
