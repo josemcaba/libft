@@ -6,43 +6,45 @@
 #    By: jocaball <jocaball@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 14:19:51 by jocaball          #+#    #+#              #
-#    Updated: 2024/01/06 14:22:16 by jocaball         ###   ########.fr        #
+#    Updated: 2024/08/17 14:22:16 by jocaball         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# Nombre de la biblioteca
 NAME = libft.a
 
-HDR = libft.h
-SRC = $(wildcard *.c)
-OBJ = $(patsubst %.c,%.o,$(SRC))
+# Rutas de los archivos fuente
+SRC_DIR = .
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 
+# Rutas de los archivos objeto
+OBJ_DIR = .
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
+
+# Opciones del compilador
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
-LIB = ar rcs 
+CFLAGS = -Wall -Wextra -Werror
 
-all : $(NAME)
+# Regla para construir todo
+all: $(NAME)
 
-$(NAME): $(OBJ) $(HDR)
-	@$(LIB) $(NAME) $(OBJ)
-	@echo "$(GREEN)\n-------> Library $(YELLOW)$(NAME)$(GREEN) has been created\n$(DEF_COLOR)"
+# Regla principal para construir la biblioteca
+$(NAME): $(OBJ_FILES)
+	ar rcs $@ $^
 
-clean :
-	rm -rf $(OBJ)
+# Regla para construir los archivos objeto
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-fclean : clean
+# Regla para limpiar los archivos objeto
+clean:
+	rm -f $(OBJ_FILES)
+
+# Regla para limpiar los archivos objeto y la biblioteca
+fclean: clean
 	rm -f $(NAME)
 
-re : fclean all
+# Regla para reconstruir todo
+re: fclean all
 
-.PHONY : $(NAME) all clean fclean re
-
-DEF_COLOR = \033[0;39m
-BLACK	  =	\033[0;30m
-RED		  =	\033[1;91m
-GREEN	  =	\033[1;92m
-YELLOW	  = \033[0;93m
-BLUE	  = \033[0;94m
-MAGENTA	  = \033[0;95m
-CYAN	  = \033[0;96m
-GRAY	  = \033[0;90m
-WHITE	  = \033[0;97m
+.PHONY: all clean fclean re
