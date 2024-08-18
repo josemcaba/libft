@@ -30,21 +30,33 @@ all: $(NAME)
 
 # Regla principal para construir la biblioteca
 $(NAME): $(OBJ_FILES)
-	ar rcs $@ $^
+	@ar rcs $@ $^
+	@echo "$(CYAN)\n-------> Library $(YELLOW)$(NAME)$(CYAN) has been created\n$(DEF_COLOR)"
 
 # Regla para construir los archivos objeto
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Regla para limpiar los archivos objeto
 clean:
-	rm -f $(OBJ_FILES)
+	@rm -f $(OBJ_FILES)
 
 # Regla para limpiar los archivos objeto y la biblioteca
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 # Regla para reconstruir todo
 re: fclean all
 
 .PHONY: all clean fclean re
+
+DEF_COLOR = \033[0;39m
+BLACK	  =	\033[0;30m
+RED		  =	\033[1;91m
+GREEN	  =	\033[1;92m
+YELLOW	  = \033[0;93m
+BLUE	  = \033[0;94m
+MAGENTA	  = \033[0;95m
+CYAN	  = \033[0;96m
+GRAY	  = \033[0;90m
+WHITE	  = \033[0;97m
