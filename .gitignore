@@ -4,4 +4,4 @@
 try1/
 libft.a
 tests/
-
+*.o
